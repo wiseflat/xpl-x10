@@ -1,0 +1,18 @@
+{
+  "name": "xpl-x10",
+  "version": "0.1.0",
+  "description": "Node JS layer to execute x10 through mochad",
+  "main": "./lib/xpl-x10.js",
+  "dependencies": {
+    "xpl-api": "~1.0.12",
+    "fs": "~0.0.2"
+  },
+  "keywords": [
+    "XPL","nodejs","x10"
+  ],
+  "repository": { "type": "git", "url": "https://github.com/wiseflat/xpl-x10.git" },
+  "author": "Mathieu Garcia",
+  "license": "GPL",
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/wiseflat/xpl-x10"
+}
