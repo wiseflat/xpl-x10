@@ -13,15 +13,15 @@ Node JS layer to execute x10 modules with mochad
 
 You need to install the mochad first
 
-$ sudo apt-get install libusb-1.0-0-dev
-$ wget -O mochad.tgz http://sourceforge.net/projects/mochad/files/latest/download 
-$ tar xf mochad.tgz
+    $ sudo apt-get install libusb-1.0-0-dev
+    $ wget -O mochad.tgz http://sourceforge.net/projects/mochad/files/latest/download 
+    $ tar xf mochad.tgz
 
 
-$ cd mochad*
-$ ./configure
-$ make
-$ sudo make install
+    $ cd mochad*
+    $ ./configure
+    $ make
+    $ sudo make install
 
 Send xpl-cmnd to execute your script
 
