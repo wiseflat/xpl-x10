@@ -3,7 +3,8 @@ var schema_x10basic = require('/etc/wiseflat/schemas/x10.basic.json');
 
 var wt = new xplx10(null, {
 	//xplSource: 'bnz-shell.wiseflat'
-        xplLog: false
+        xplLog: false,
+	forceBodySchemaValidation: false
 });
 
 wt.init(function(error, xpl) { 
