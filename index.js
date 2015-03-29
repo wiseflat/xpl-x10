@@ -17,7 +17,7 @@ wt.init(function(error, xpl) {
 	xpl.addBodySchema(schema_x10basic.id, schema_x10basic.definitions.body);
 	
         xpl.on("xpl:x10.basic", function(evt) {
-                if(evt.headerName == 'xpl-cmnd' && wt.validBasicSchema(evt.body)) {
+                if(evt.headerName == 'xpl-cmnd') {
                     if(evt.body.command == 'on') wt.on(evt.body);
                     if(evt.body.command == 'off') wt.off(evt.body);
                     if(evt.body.command == 'dim') wt.dim(evt.body);
