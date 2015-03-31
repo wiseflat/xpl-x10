@@ -4,7 +4,7 @@
   "description": "Node JS layer to execute x10 through mochad",
   "main": "./lib/xpl-x10.js",
   "dependencies": {
-    "xpl-api": "~1.0.12",
+    "xpl-api": "Nodejs-XPL/xpl-api",
     "fs": "~0.0.2"
   },
   "keywords": [
