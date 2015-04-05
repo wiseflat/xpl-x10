@@ -1,5 +1,6 @@
 var xplx10 = require("./lib/xpl-x10");
 var schema_x10basic = require('/etc/wiseflat/schemas/x10.basic.json');
+var schema_x10config = require('/etc/wiseflat/schemas/x10.config.json');
 
 var wt = new xplx10(null, {
 	//xplSource: 'bnz-shell.wiseflat'
@@ -15,6 +16,15 @@ wt.init(function(error, xpl) {
 	}
 
 	xpl.addBodySchema(schema_x10basic.id, schema_x10basic.definitions.body);
+	xpl.addBodySchema(schema_x10config.id, schema_x10config.definitions.body);
+	
+        // Load config file into hash
+        wt.readConfig();
+        
+        // Send every minutes an xPL status message 
+        setInterval(function(){
+                wt.sendConfig();
+        }, 60 * 1000);
 	
         xpl.on("xpl:x10.basic", function(evt) {
                 if(evt.headerName == 'xpl-cmnd') {
