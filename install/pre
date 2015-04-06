@@ -1,0 +1,11 @@
+#!/bin/sh
+
+cd /tmp
+apt-get -y install libusb-1.0-0-dev
+
+wget -O mochad.tgz http://sourceforge.net/projects/mochad/files/latest/download
+tar xf mochad.tgz
+
+cd mochad*
+./configure
+make && make install
