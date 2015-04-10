@@ -27,12 +27,16 @@ wt.init(function(error, xpl) {
         }, 60 * 1000);
 	
         xpl.on("xpl:x10.basic", function(evt) {
-                if(evt.headerName == 'xpl-cmnd') {
-                    if(evt.body.command == 'on') wt.on(evt.body);
-                    if(evt.body.command == 'off') wt.off(evt.body);
-                    if(evt.body.command == 'dim') wt.dim(evt.body);
-                    if(evt.body.command == 'bright') wt.bright(evt.body);
+                if(wt.configHash.enable && evt.headerName == 'xpl-cmnd') {
+                    if(evt.body.command == 'on') wt.on(evt);
+                    if(evt.body.command == 'off') wt.off(evt);
+                    if(evt.body.command == 'dim') wt.dim(evt);
+                    if(evt.body.command == 'bright') wt.bright(evt);
                 }
+        });
+	
+        xpl.on("xpl:x10.config", function(evt) {
+                if(evt.headerName == 'xpl-cmnd') wt.writeConfig(evt);
         });
 });
 
