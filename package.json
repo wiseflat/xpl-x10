@@ -1,6 +1,6 @@
 {
   "name": "xpl-x10",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node JS layer to execute x10 through mochad",
   "main": "./lib/xpl-x10.js",
   "dependencies": {
